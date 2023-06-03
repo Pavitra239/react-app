@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
   const date = new Date();
   const expenses = [
     { title: "Car Insurance", amount: 296.76, date: date },
@@ -14,6 +14,6 @@ function App() {
       <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;

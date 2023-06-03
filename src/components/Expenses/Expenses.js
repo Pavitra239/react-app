@@ -1,7 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
-function Expenses({ expenses }) {
+const Expenses = ({ expenses }) => {
   return (
     <div className="expenses">
       <ExpenseItem
@@ -21,6 +21,6 @@ function Expenses({ expenses }) {
       />
     </div>
   );
-}
+};
 
 export default Expenses;
