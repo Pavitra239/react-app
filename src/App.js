@@ -1,10 +1,17 @@
 import Expenses from "./components/Expenses";
 
 function App() {
+  const date = new Date();
+  const expenses = [
+    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
+    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
+    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
+    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
+  ];
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Expenses></Expenses>
+      <Expenses expenses={expenses} />
     </div>
   );
 }

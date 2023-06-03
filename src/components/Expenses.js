@@ -1,14 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
-function Expenses() {
-  const date = new Date();
-  const expenses = [
-    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
-    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
-    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
-    { title: "Car Insurance", amount: 296.76, date: date.toDateString() },
-  ];
+function Expenses({ expenses }) {
   return (
     <div className="expenses">
       <ExpenseItem
