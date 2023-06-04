@@ -4,14 +4,17 @@ import "./Expenses.css";
 import { useState } from "react";
 
 const Expenses = ({ expenses }) => {
-  const [filterValue, setFilterValue] = useState("");
+  const [filterValue, setFilterValue] = useState("2020");
   const filterValueHandler = (value) => {
     setFilterValue(value);
-    console.log(filterValue);
+    console.log(value);
   };
   return (
     <div className="expenses">
-      <ExpensesFilter onSelectFilterValue={filterValueHandler} />
+      <ExpensesFilter
+        selected={filterValue}
+        onSelectFilterValue={filterValueHandler}
+      />
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
